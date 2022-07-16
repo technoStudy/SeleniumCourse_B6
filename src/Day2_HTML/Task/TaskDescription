@@ -1,0 +1,7 @@
+create a form that asks:
+ - name
+ - date of birth
+ - phone number
+ - (up to you)
+
+ it should submit it all to FormSubmission.html
