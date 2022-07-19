@@ -3,7 +3,7 @@ package Day4;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SeleniumIntro {
+public class _01_SeleniumIntro {
 
     public static void main(String[] args) {
 
