@@ -22,8 +22,28 @@ public class _06_ClickAndSendKeys {
 
         Thread.sleep(3000);
 
+        String value = "Hello World!";
+
         WebElement messageInput = driver.findElement(By.cssSelector("input[id='user-message']"));
-        messageInput.sendKeys("Hello World!");
+        messageInput.sendKeys(value);
+
+        Thread.sleep(3000);
+
+        WebElement showMessageButton = driver.findElement(By.cssSelector("button[onclick='showInput();']"));
+        showMessageButton.click();
+
+        Thread.sleep(3000);
+
+        WebElement displayedMessage = driver.findElement(By.id("display"));
+        String displayedMessageText = displayedMessage.getText();
+
+        if (displayedMessageText.equals(value)) {
+            System.out.println("Success!");
+        } else {
+            System.out.println("Fail!");
+        }
+
+        driver.quit();
 
     }
 
