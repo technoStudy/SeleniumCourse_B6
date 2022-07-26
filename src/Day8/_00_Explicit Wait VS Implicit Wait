@@ -1,0 +1,17 @@
+Explicit Wait: will wait for a specific element and specific condition
+        - elementToBeClickable();
+        - visibilityOfElement();
+
+
+
+                    Implicit Wait vs Explicit Wait
+
+        Implicit Wait:
+            - will be created once and it'll affect driver until
+            driver.quit() method!
+            - Handling noSuchElementException!
+
+        Explicit Wait:
+            - will create explicit wait for a specific element and
+            when the element executed it will not affect any other element!
+            - Handle the exception depends on which method we use!
