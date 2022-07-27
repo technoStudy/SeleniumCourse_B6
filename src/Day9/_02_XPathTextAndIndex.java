@@ -29,6 +29,15 @@ public class _02_XPathTextAndIndex {
         // When your locator finds more than 1 element you can use index to select specific one
         WebElement enrollNowButton = driver.findElement(By.xpath("(//span[text()='Enroll now'])[2]"));
 
+        // In XPath we can move from parent element to child using // (double slash)
+        WebElement anotherHeader = driver.findElement(By.xpath("//div[@class='t181__title t-title t-title_md']//p"));
+        String anotherHeaderText = anotherHeader.getText();
+
+        // In XPath we can move from child element to parent using /..
+        WebElement divElement = driver.findElement(By.xpath("//input[@name='Email']/.."));
+
+        driver.quit();
+
     }
 
 }
