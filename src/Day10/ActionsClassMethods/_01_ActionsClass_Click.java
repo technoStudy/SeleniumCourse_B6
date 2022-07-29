@@ -1,4 +1,4 @@
-package Day10;
+package Day10.ActionsClassMethods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class _03_ActionsClass_RightClick {
+public class _01_ActionsClass_Click {
 
     public static void main(String[] args) {
 
@@ -16,13 +16,13 @@ public class _03_ActionsClass_RightClick {
 
         driver.get("https://demoqa.com/buttons");
 
-        WebElement rightClickMeButton = driver.findElement(By.id("rightClickBtn"));
+        WebElement clickMeButton = driver.findElement(By.xpath("//button[text()='Click Me']"));
 
         Actions actions = new Actions(driver);
-        actions.contextClick(rightClickMeButton).perform();
+        actions.click(clickMeButton).perform();
 
-        WebElement rightClickMessage = driver.findElement(By.id("rightClickMessage"));
-        System.out.println(rightClickMessage.getText());
+        WebElement textAfterClick = driver.findElement(By.id("dynamicClickMessage"));
+        System.out.println(textAfterClick.getText());
 
         driver.quit();
 
