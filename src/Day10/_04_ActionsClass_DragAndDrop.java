@@ -22,6 +22,12 @@ public class _04_ActionsClass_DragAndDrop {
         Actions actions = new Actions(driver);
         actions.dragAndDrop(fiveThousandButton, debitAmount).perform();
 
+        WebElement bankButton = driver.findElement(By.id("credit2"));
+        WebElement debitAccount = driver.findElement(By.id("bank"));
+
+        actions.dragAndDrop(bankButton, debitAccount).perform();
+
+        driver.quit();
 
     }
 
